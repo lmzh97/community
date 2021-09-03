@@ -1,5 +1,6 @@
 package life.silenceradio.community.mapper;
 
+import life.silenceradio.community.dto.QuestionDTO;
 import life.silenceradio.community.model.Question;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -21,4 +22,10 @@ public interface QuestionMapper {
 
     @Select("select count(id) from question")
     Integer count();
+
+    @Select("select * from question where id = #{id}")
+    Question findById(@Param("id") Integer id);
+
+    @Select("select count(id) from question where creator = #{userId}")
+    Integer countByUserId(@Param("userId") Integer userId);
 }

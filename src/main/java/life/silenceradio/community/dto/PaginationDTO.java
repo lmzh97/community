@@ -18,9 +18,9 @@ public class PaginationDTO {
 
     public void setPagination(Integer totalCount, Integer page, Integer size) {
         totalPage = (totalCount + size - 1) / size;
-
-        page = page < 1 ? 1 : page;
+        totalPage = Math.max(totalPage, 1);
         page = page > totalPage ? totalPage : page;
+        page = page < 1 ? 1 : page;
 
         this.page = page;
         int pagesBegin = Math.max(page - 3, 1), pagesEnd = Math.min(page + 3, totalPage);
