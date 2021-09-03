@@ -1,3 +1,3 @@
 alter table USER
-    add avatar VARCHAR(100);
 
+    add avatar_url VARCHAR(100);
