@@ -18,3 +18,7 @@ CREATE TABLE PUBLIC.user(
 create user if not exists sa password '123';
 alter user sa admin true;
 ```
+```shell
+mvn flyway:migrate
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+```
