@@ -4,6 +4,7 @@ import life.silenceradio.community.dto.PaginationDTO;
 import life.silenceradio.community.dto.QuestionDTO;
 import life.silenceradio.community.exception.CustomizeErrorCode;
 import life.silenceradio.community.exception.CustomizeException;
+import life.silenceradio.community.mapper.QuestionExtMapper;
 import life.silenceradio.community.mapper.QuestionMapper;
 import life.silenceradio.community.mapper.UserMapper;
 import life.silenceradio.community.model.Question;
@@ -22,6 +23,9 @@ import java.util.List;
 public class QuestionService {
     @Autowired
     private QuestionMapper questionMapper;
+
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
 
     @Autowired
     private UserMapper userMapper;
@@ -106,5 +110,12 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+
+    public void incView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
