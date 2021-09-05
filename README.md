@@ -4,6 +4,8 @@
 [Github OAuth](https://docs.github.com/en/developers/apps/building-github-apps/creating-a-github-app)
 [Github OAuth改版问题](https://docs.github.com/en/rest/overview/other-authentication-methods)
 [Github OAuth改版问题--CSDN示例](https://blog.csdn.net/kuaileky/article/details/104217757)
+[post man](https://chrome.google.com/webstore/detail/tabbed-postman-rest-clien/coohjcphdfgbiolnekdpbcijmhambjff)
+
 ```sql
 CREATE TABLE PUBLIC.user(
                             id INT AUTO_INCREMENT PRIMARY KEY,
