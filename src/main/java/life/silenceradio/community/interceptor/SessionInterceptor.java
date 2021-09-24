@@ -4,7 +4,6 @@ import life.silenceradio.community.mapper.UserMapper;
 import life.silenceradio.community.model.User;
 import life.silenceradio.community.model.UserExample;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
